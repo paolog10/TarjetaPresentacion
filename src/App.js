@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Tarjeta from './components/tarjeta';
+import imagenPerfil from './images/foto1.jpg'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tarjeta
+        imagen={imagenPerfil} //pasarle como prop
+        nombre="Paolo Gamarra"
+        titulo="Desarrollador SQL"
+        telefono="3564 661340"
+        email="paologamarra10@gmail.com"
+        direccion="San Francisco, Córdoba, Argentina"
+      />
     </div>
   );
 }
