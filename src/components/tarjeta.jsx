@@ -15,6 +15,20 @@ const Tarjeta = ({ nombre, titulo, telefono, email, direccion, imagen, redes }) 
       <p>Teléfono: {telefono}</p>
       <p>Email: {email}</p>
       <p>Dirección: {direccion}</p>
+      <div className="redes-sociales">
+        {redes.map((red, index) => (
+          <a key={index}
+            href={red.url} 
+            target="_blank" 
+            rel="noopener noreferrer">
+            <img 
+              src={red.icono} 
+              alt={red.nombre} 
+              className="icono-red"
+            />
+          </a>
+        ))}
+      </div>
     </div>
   );
 };
